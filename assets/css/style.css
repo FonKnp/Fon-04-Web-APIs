@@ -2,7 +2,11 @@ h1 {
   text-align: center;
 }
 
-.container {
+.nav-container {
   display: flex;
   justify-content: space-between;
+}
+
+.quiz-container {
+  margin-left: 20%;
 }
