@@ -2,21 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scal=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript fundamentals Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
     <header>
       <nav class="nav-container">
-        <h3>View high scores</h3>
-        <h3>Time:</h3>
+        <h3 id="score">View high scores</h3>
+        <h3>Time: <span id="time"></span></h3>
       </nav>
-      <h1>JavaScript Fundamental Quiz</h1>
     </header>
+    <h1>JavaScript Fundamental Quiz</h1>
       <div class="quiz-container">
-        <p>Check the box</p>
-        <button>Hello</button>
+        <!-- <p>Check the box</p> -->
+        <button id="start-button">Start Quiz</button>
         <div class="question" id="question"></div>
         <div class="choices" id="choices"></div>
         <div id="result"></div>
