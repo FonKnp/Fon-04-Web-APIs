@@ -47,6 +47,7 @@ function showQustion() {
     button.addEventListener('click', () => {
       checkAnswer();
     });
+    choicesAll.appendChild(button);
   });
 }
 
