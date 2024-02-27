@@ -36,6 +36,19 @@ let timeLeft = 5;
 function startQuiz() {
   startButton.classList.add('hide');
 }
+// show question
+function showQustion() {
+  let currentQuestion = quiz[questionIndex];
+  questionAll.textContent = currentQuestion.question;
+  choicesAll.innerHTML = '';
+  currentQuestion.choices.forEach((choice, index) => {
+    const button = document.createElement('button');
+    button.textContent = choice;
+    button.addEventListener('click', () => {
+      checkAnswer();
+    });
+  });
+}
 
 //countdown time
 function setTime() {
@@ -58,38 +71,9 @@ function updateTimer() {
   timerEl.textContent = timeLeft + ' s';
 }
 
-function showQustion() {
-  let currentQuestion = quiz[questionIndex];
-  questionAll.textContent = currentQuestion.question;
-  choicesAll.innerHTML = '';
-  currentQuestion.choices.forEach(choice => {
-    const button = document.createElement('button');
-    button.textContent = choice;
-    button.addEventListener('click', () => {
-      if (choice === currentQuestion.answer) {
-        resultAll.textContent = 'You are correct!!!';
-      } else {
-        resultAll.textContent = 'WRONG ANSWER!!!';
-        timeLeft -= 10;
-        if (timeLeft < 0) {
-          timeLeft = 0;
-        }
-        updateTimer();
-      }
-      setTimeout(() => {
-        questionIndex++;
-        if (questionIndex < quiz.length) {
-          showQustion();
-          resultAll.textContent = '';
-        } else {
-          questionAll.textContent = 'You are done with the quiz. Nice job!';
-          choicesAll.innerHTML = '';
-          
-        }
-      }, 1000);
-    });
-  });
-}
 
+function timeOut () {
+  
+}
 startButton.addEventListener('click', setTime);
 
