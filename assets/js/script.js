@@ -34,7 +34,7 @@ let timeLeft = 5;
 
 //start quiz
 function startQuiz() {
-  startButton.classList.add('hide');
+  startButton.style.display = 'none';
 }
 // show question
 function showQustion() {
@@ -58,7 +58,7 @@ function setTime() {
     timerEl.textContent = timeLeft + ' s';
     
     if(timeLeft === 0) {
-      clearInterval(timerInterval);
+      
       questionAll.textContent = 'Your time is up!';
       clearInterval(timerInterval);
       
@@ -67,10 +67,6 @@ function setTime() {
   showQustion();
 }
 
-
-function updateTimer() {
-  timerEl.textContent = timeLeft + ' s';
-}
 
 
 function timeOut () {
