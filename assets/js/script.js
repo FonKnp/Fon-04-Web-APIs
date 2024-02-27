@@ -27,6 +27,7 @@ var choicesAll = document.getElementById('choices');
 var resultAll = document.getElementById('result');
 var timerEl = document.getElementById('time');
 var startButton = document.getElementById('start-button');
+var restartButton = document.getElementById('restart-button');
 
 let questionIndex = 0;
 let highscore = 0;
@@ -35,6 +36,8 @@ let timeLeft = 5;
 //start quiz
 function startQuiz() {
   startButton.style.display = 'none';
+  setTime();
+  showQustion();
 }
 // show question
 function showQustion() {
@@ -51,26 +54,31 @@ function showQustion() {
   });
 }
 
+//check answer function
+function checkAnswer() {
+
+}
+
 //countdown time
 function setTime() {
   var timerInterval = setInterval(() => {
     timeLeft--;
     timerEl.textContent = timeLeft + ' s';
     
+    //times run out
     if(timeLeft === 0) {
       questionAll.textContent = 'Your time is up!';
       choicesAll.innerHTML = '';
       clearInterval(timerInterval);
-      
     }
   }, 1000)
-  showQustion();
 }
 
 
 
-function timeOut () {
+
+function updateTimer () {
   
 }
-startButton.addEventListener('click', setTime);
+startButton.addEventListener('click', startQuiz);
 

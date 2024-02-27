@@ -18,6 +18,6 @@ h1 {
   cursor: pointer;
 }
 
-.hide {
+#restart-button {
   display: none;
 }
