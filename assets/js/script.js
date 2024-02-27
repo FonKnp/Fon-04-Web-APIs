@@ -58,8 +58,8 @@ function setTime() {
     timerEl.textContent = timeLeft + ' s';
     
     if(timeLeft === 0) {
-      
       questionAll.textContent = 'Your time is up!';
+      choicesAll.innerHTML = '';
       clearInterval(timerInterval);
       
     }
