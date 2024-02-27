@@ -28,6 +28,7 @@ var resultAll = document.getElementById('result');
 var timerEl = document.getElementById('time');
 var startButton = document.getElementById('start-button');
 var restartButton = document.getElementById('restart-button');
+var highscoreList = document.getElementById('scores-list');
 
 let questionIndex = 0;
 let highscore = 0;
@@ -74,6 +75,21 @@ function setTime() {
   }, 1000)
 }
 
+//highscore function
+var scores = '';
+
+function renderHighscores() {
+  highscoreList.innerHTML = '';
+
+  for (var i =o; i < scores.length; i++) {
+    var score = scores[i];
+
+    var li = document.createElement('li');
+    li.textContent = score;
+    
+    highscoreList.appendChild(li);
+  }
+}
 
 
 

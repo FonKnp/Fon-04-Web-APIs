@@ -11,6 +11,10 @@ h1 {
   margin-left: 20%;
 }
 
+.highscore-container {
+  display: flex;
+}
+
 .choices button {
   display: block;
   margin: 10px auto;
