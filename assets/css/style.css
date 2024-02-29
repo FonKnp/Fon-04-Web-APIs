@@ -5,17 +5,14 @@ h1 {
 .nav-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.quiz-container {
-  margin-left: 20%;
-}
 
 .highscore-container {
   display: flex;
   flex-direction: column;
 }
-
 
 .hide {
   display: none;
@@ -32,3 +29,4 @@ h1 {
   color: black;
   border: none;
 }
+

@@ -1,3 +1,13 @@
+var questionAll = document.getElementById('question');
+var choicesAll = document.getElementById('choices');
+var resultAll = document.getElementById('result');
+var timerEl = document.getElementById('time');
+var startButton = document.getElementById('start-button');
+var restartButton = document.getElementById('restart-button');
+var highscoreList = document.getElementById('scores-list');
+var currentScore = document.getElementById('current-score');
+var titleEl = document.querySelector('h1');
+
 // add quiz variable that contain arrays of question, choices, and correct answer
 const quiz = [
   {
@@ -22,17 +32,12 @@ const quiz = [
   },
 ]
 
-var questionAll = document.getElementById('question');
-var choicesAll = document.getElementById('choices');
-var resultAll = document.getElementById('result');
-var timerEl = document.getElementById('time');
-var startButton = document.getElementById('start-button');
-var restartButton = document.getElementById('restart-button');
-var highscoreList = document.getElementById('scores-list');
 
 let questionIndex = 0;
 let highscore = 0;
-let timeLeft = 5;
+let timeLeft = 60;
+
+restartButton.setAttribute('class', 'hide');
 
 //start quiz
 function startQuiz() {
@@ -44,10 +49,14 @@ function startQuiz() {
 function showQustion() {
   let currentQuestion = quiz[questionIndex];
   questionAll.textContent = currentQuestion.question;
+  questionAll.setAttribute('style',
+  'font-size: 25px; font-weight: bold; text-align: center; margin-bottom: 3rem;');
   choicesAll.innerHTML = '';
   currentQuestion.choices.forEach((choice, index) => {
     const button = document.createElement('button');
+    titleEl.setAttribute('class', 'hide');
     button.textContent = choice;
+    button.setAttribute("class", "buttonAll");
     button.addEventListener('click', () => {
       checkAnswer();
     });
