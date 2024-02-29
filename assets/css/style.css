@@ -13,15 +13,22 @@ h1 {
 
 .highscore-container {
   display: flex;
+  flex-direction: column;
 }
 
-.choices button {
-  display: block;
-  margin: 10px auto;
-  padding: 20px auto;
-  cursor: pointer;
-}
 
-#restart-button {
+.hide {
   display: none;
+}
+
+.buttonAll {
+  display: block;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 24px;
+  margin: 10px auto;
+  border-radius: 8px;
+  background-color: lightgray;
+  color: black;
+  border: none;
 }
