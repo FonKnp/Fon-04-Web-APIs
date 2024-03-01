@@ -102,10 +102,12 @@ function checkAnswer(answer) {
     if (answer === correctAnswer) {
         score += 20;
         resultContainer.textContent = "Correct!";
+        resultContainer.style.color = 'green';
     } else {
         timeLeft -= 15;
         if (timeLeft < 0) timeLeft = 0;
         resultContainer.textContent = "Wrong!";
+        resultContainer.style.color = 'red';
     }
 
     choicesAll.appendChild(resultContainer);
