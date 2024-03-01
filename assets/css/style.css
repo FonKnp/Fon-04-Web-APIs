@@ -10,24 +10,25 @@ button {
   padding: 10px 24px;
   margin: 10px auto;
   border-radius: 8px;
-  background-color: lightgray;
-  color: black;
+  background-color: purple;
+  color: white;
   border: none;
 }
 
 button:hover {
-  background-color: black;
-  color: white ;
+  background-color: lightblue;
+  color: black ;
 }
 
 #quiz-container {
   display: flex;
   flex-direction: column;
-  margin-left: 25%;
+  margin-left: 20%;
 }
 
 #highscore-container,
 #result-container {
+  margin: 20px;
   font-size: 24px;
 }
   
@@ -43,6 +44,7 @@ button:hover {
 
 #viewscores {
   cursor: pointer;
+  color: blue;
 }
 
 #viewscores:hover {

@@ -78,7 +78,7 @@ function startQuiz() {
 function showQuestion() {
     var q = questions[currentQuestion];
     questionAll.textContent = q.question;
-    questionAll.setAttribute('style', 'font-size: 25px; font-weight: bold;');
+    questionAll.setAttribute('style', 'font-size: 30px; font-weight: bolder;');
     choicesAll.innerHTML = "";
     var choicesList = document.createElement("ol");
     q.choices.forEach(function (choice) {
