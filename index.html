@@ -8,36 +8,39 @@
   </head>
 
   <body>
-
+     <!-- header -->
     <header>
-      <nav class="nav-container">
-        <h3 id="score">View high scores</h3>
-        <h3>Time: <span id="time"></span></h3>
+      <nav>
+        <h3 id="viewscores">View high scores</h3>
+        <h3>Time: <span id="time">60</span></h3>
       </nav>
+      <h1 id="titleEl" style="text-align: center;">JavaScript Fundamental Quiz</h1>
     </header>
-
     
-    <div class="quiz-container">
-        <h1>JavaScript Fundamental Quiz</h1>
-        <button class="buttonAll"  id="start-button">Start Quiz</button>
-        <button class="buttonAll" id="restart-button">Go back</button>
-        <div class="question" id="question"></div>
-        <div class="choices" id="choices"></div>
-        <div id="result"></div>
-      </div>
+    <!-- high score box -->
+    <div class="highscore-container">
+      <div id="scores-list"></div>
+    </div>
+
+    <!-- Quiz container -->
+    <div class="quiz-container" style="display: none;">
+        <p id="question"></p>
+        <ol id="choices"></ol>
+    </div>
 
       <!-- initial input box -->
-      <form class="hide" id="initial-form">
-        <p>Your final score is:<span id="current-score"></span></p>
-        <input type="text" placeholder="your initial" name="initial" id="score-initial"/>
-        <button>Submit</button>
-      </form>
+    <div id="initial-input" style="display: none;">
+      <h3>Enter Initials:</h3>
+      <input type="text" placeholder="your initial" id="initial"/>
+      <button id="submit-button">Submit</button>
+    </form>
 
-      <!-- high score box -->
-      <div class="highscore-container hide">
-        <h2>High Scores</h2>
-        <ul id="scores-list"></ul>
-      </div>
+      <!-- all the button -->
+    <div id="buttons-container">
+      <button id="start-btn">Start Quiz</button>
+      <button id="restart-btn" style="display: none;">Go back</button>
+      <button id="clear-highscores-btn" style="display: none;">Clear Highscores</button>
+    </div>
 
     <script src="./assets/js/script.js"></script>
   </body>

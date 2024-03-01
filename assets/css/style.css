@@ -1,25 +1,10 @@
-h1 {
-  text-align: center;
-}
-
-.nav-container {
+nav {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 2%;
 }
 
-
-.highscore-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.hide {
-  display: none;
-}
-
-.buttonAll {
-  display: block;
+button {
   cursor: pointer;
   font-size: 16px;
   padding: 10px 24px;
@@ -30,3 +15,47 @@ h1 {
   border: none;
 }
 
+button:hover {
+  background-color: black;
+  color: white ;
+}
+
+#quiz-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25%;
+}
+
+#highscore-container,
+#result-container {
+  font-size: 24px;
+}
+  
+#highscore-container,
+#initial-input {
+  text-align: center;
+}
+
+#initials {
+  display: block;
+  margin: 0 auto;
+}
+
+#viewscores {
+  cursor: pointer;
+}
+
+#viewscores:hover {
+  color: red;
+}
+
+#buttons-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#choices ol {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
