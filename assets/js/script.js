@@ -38,7 +38,7 @@ var questionAll = document.getElementById("question");
 var choicesAll = document.getElementById("choices");
 var timerEl = document.getElementById("timer");
 var initialInput = document.getElementById("initial-input");
-var submitBt = document.getElementById("submit-initials");
+var submitBt = document.getElementById("submit-button");
 var scorePoint = document.getElementById("highscore");
 var highscoreContainer = document.getElementById('highscore-container');
 var clearBt = document.getElementById("clear-highscores-btn");
@@ -48,7 +48,6 @@ var titleEl = document.getElementById('titleEl');
 
 startBt.addEventListener("click", startQuiz);
 clearBt.style.display = 'none';
-highscoreContainer.style.display = 'none';
 
 viewscores.addEventListener("click", function () {
     var initials = document.getElementById("initials").value;

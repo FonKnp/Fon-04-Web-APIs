@@ -8,34 +8,35 @@
   </head>
 
   <body>
-     <!-- header -->
+    <!-- header -->
     <header>
+      <!-- nave bar -->
       <nav>
-        <h3 id="viewscores">View high scores</h3>
-        <h3>Time: <span id="time">60</span></h3>
+        <h3 id="viewscores">View High scores</h3>
+        <h3>Time : <span id="timer">60</span></h3>
       </nav>
       <h1 id="titleEl" style="text-align: center;">JavaScript Fundamental Quiz</h1>
     </header>
-    
+  
     <!-- high score box -->
-    <div class="highscore-container">
-      <div id="scores-list"></div>
+    <div id="highscore-container">
+      <div id="highscore"></div>
     </div>
-
-    <!-- Quiz container -->
-    <div class="quiz-container" style="display: none;">
-        <p id="question"></p>
-        <ol id="choices"></ol>
+    
+    <!-- quiz box -->
+    <div id="quiz-container" style="display: none;">
+      <p id="question"></p>
+      <ol id="choices"></ol>
     </div>
-
-      <!-- initial input box -->
+    
+    <!-- initial box -->
     <div id="initial-input" style="display: none;">
       <h3>Enter Initials:</h3>
-      <input type="text" placeholder="your initial" id="initial"/>
+      <input type="text" id="initials">
       <button id="submit-button">Submit</button>
-    </form>
-
-      <!-- all the button -->
+    </div>
+    
+    <!-- all the buttons -->
     <div id="buttons-container">
       <button id="start-btn">Start Quiz</button>
       <button id="restart-btn" style="display: none;">Go back</button>
